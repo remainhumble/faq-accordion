@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-image: url(assets/images/background-pattern-mobile.svg);
+  display: flex;
+  justify-content: center;
+  color: hsl(292, 42%, 14%);
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-right: 6rem;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2:hover {
+  color: hsl(292, 16%, 49%);
+}
+
+p {
+  font-weight: 400;
+}
+
+.container {
+    max-width: 375px;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: hsl(0, 100%, 100%);
+  transform: scale(0.8);
+}
+
+.topheading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq {
+  max-width: 350px;
+  margin-top: 2rem;
+  border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+
+.faq:last-of-type {
+  border-bottom: none;
+}
+
+.faq p {
+  color: hsl(292, 16%, 49%);
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+@media (min-width: 411px) {
+  body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+  }
+
+  .container {
+    min-width: 750px;
+    padding: 3rem 4rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .faq {
+    max-width: 700px;
+  }
+}

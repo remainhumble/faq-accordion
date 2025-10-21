@@ -77,13 +77,11 @@ p {
   display: block;
 }
 
-.faq.active .dropdown {
 
-}
 
 .answer {
   display: none;
-  transition: max-height 1.4s ease;
+  transition: display 1.4s ease;
   overflow: hidden;
 }
 

@@ -1,97 +1,116 @@
-# Frontend Mentor - FAQ accordion
+# Frontend Mentor - FAQ accordion solution
 
-![Design preview for the FAQ accordion coding challenge](preview.jpg)
+This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
 
-## The challenge
+## Overview
 
-Your challenge is to build out this FAQ accordion and get it looking as close to the design as possible.
+A FAQ accordion is an effective way to display frequently asked questions and answers on your website. It provides a user-friendly way for visitors to find information without overwhelming them with text.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### The challenge
 
-Your users should be able to:
+Users should be able to:
 
 - Hide/Show the answer to a question when the question is clicked
 - Navigate the questions and hide/show answers using keyboard navigation alone
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./mobile.png)
+![](./desktop.png)
+![](./active-states.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+- Solution URL: [https://github.com/remainhumble/faq-accordion]
+- Live Site URL: [https://remainhumble.github.io/faq-accordion/]
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+I started by studying the Frontend Mentor brief and the provided design files, then sketched a simple component breakdown to keep the implementation modular and accessible.
+- Focused on semantic markup: each question is a button inside a list item to ensure correct semantics and assistive technology support.
+- Keyboard navigation: supported Enter/Space to toggle, Arrow Up/Down to move focus between questions, and Home/End for quick navigation.
+- Accessibility testing: validated with keyboard-only navigation.
+- Cross-browser testing and responsiveness: checked on desktop, tablet, and mobile viewports; fixed spacing and overflow edge-cases.
+- Deployment: published the site with GitHub Pages and added screenshots to the README file.
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-## Building your project
+### Built with
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+- Semantic HTML5 markup
+- CSS custom properties
+- JavaScript
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Deploying your project
+### What I learned
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+- Built semantic, accessible markup: questions implemented as buttons inside list items with proper ARIA (aria-expanded) so screen readers and assistive tech behave correctly.
+- Keyboard interactions: implemented Enter/Space to toggle, Arrow Up/Down to move focus, and Home/End for quick navigation — ensuring full keyboard-only control.
+- Focus management: learned to manage focus order and visible focus styles so keyboard users can reliably see and interact with the active item.
+- Responsive layout & testing: adopted a mobile-first approach and fixed spacing/overflow edge cases through cross-device testing (mobile, tablet, desktop).
+- Next steps: add unit/integration tests for keyboard interactions, extract reusable focus-management hooks, and improve accessibility by announcing state changes (e.g., polite live regions) where appropriate.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Continued development
 
-## Create a custom `README.md`
+- Improve accessibility further
+  - Add polite aria-live announcements for state changes and test with VoiceOver/NVDA.
+  - Validate against WAI-ARIA Authoring Practices for accordions and run automated a11y audits.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- Testing and reliability
+  - Add unit/integration tests for keyboard interactions (Jest + Testing Library).
+  - Add end-to-end tests covering focus movement and edge cases (Playwright or Cypress).
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- Focus management and keyboard UX
+  - Extract reusable focus-management hooks/utilities (open/close, restore focus, trap when needed).
+  - Ensure visible focus styles and support for prefers-reduced-motion.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+- Componentization and documentation
+  - Build a documented, themeable accordion component (Storybook stories, usage examples).
+  - Publish clear API docs and examples for consumers.
 
-## Submitting your solution
+- Performance and animation
+  - Prefer CSS-driven animations, avoid layout thrashing; optimize for smooth transitions.
+  - Respect reduced-motion preferences and test animation impact on low-end devices.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+- Tooling and type safety
+  - Adopt TypeScript for safer refactors.
+  - Integrate linting, accessibility checks, and CI to catch regressions early.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- Cross-browser & responsive polish
+  - Test interactive behavior across browsers and mobile keyboards; handle overflow/edge cases.
+  - Improve visual polish and spacing for multiple breakpoints.
 
-## Sharing your solution
+- Future accessibility enhancements
+  - Consider announcing state changes with live regions, ARIA updates, and better screen-reader messaging.
+  - Explore automated accessibility regression testing as part of CI.
 
-There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+### Useful resources
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- [FAQ accordion using HTML, CSS, JavaScript](https://www.youtube.com/watch?v=4qnWreynXLU) - Learnt and repeated after most of the work from this video, however I definitely did have to work on the appearance and behaviour myself to closely match the designs downloaded from Front End Mentor site.
+- [Why web accessibility matters](https://www.frontendmentor.io/learning-paths/introduction-to-web-accessibility-mXu-9PHVsd/article/6647781a20fb35b1b61abb4d/read) - A concise overview of accessibility principles and practical guidance for making interactive components (like accordions) keyboard- and screen-reader-friendly, plus links to further learning.
 
-## Got feedback for us?
+## Author
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
-# faq-accordion
+- Frontend Mentor - [@remainhumble](https://www.frontendmentor.io/profile/remainhumble)
+- X(formerly Twitter) - [@thiflan120699](https://x.com/thiflan120699)
